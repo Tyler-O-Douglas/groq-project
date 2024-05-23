@@ -35,6 +35,7 @@ export async function Home() {
                 <TableRow>
                   <TableHead>Deal Name</TableHead>
                   <TableHead>Stage</TableHead>
+                  <TableHead>Likelihood of Close</TableHead>
                   <TableHead>Amount</TableHead>
                   <TableHead>First Contact</TableHead>
                   <TableHead>Close Date</TableHead>
@@ -57,7 +58,8 @@ export async function Home() {
                     {deal.dealStage == 'lost' && (<Badge className="bg-orange-100 text-orange-800">{deal.dealStage}</Badge>)}
                     {deal.dealStage !== 'won' && deal.dealStage !== 'proposal' && deal.dealStage !== 'negotiation' && deal.dealStage !== 'lost' && (<Badge className="bg-red-100 text-red-800">{'NA'}</Badge>)}
                   </TableCell>
-                  <TableCell>${deal?.amount?.toLocaleString() ?? 'NA'}</TableCell>
+                  <TableCell>{deal?.likelihood ? `${deal?.likelihood}%` : 'NA'}</TableCell>
+                  <TableCell>{deal?.amount ? `$${deal?.amount?.toLocaleString()}` : 'NA'}</TableCell>
                   <TableCell>{deal?.firstContact?.split('T')[0] ?? 'NA'}</TableCell>
                   <TableCell>{deal?.closeDate?.split('T')[0] ?? 'NA'}</TableCell>
                   <TableCell>

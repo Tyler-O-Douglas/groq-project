@@ -16,7 +16,8 @@ return (
             <CardHeader className="font-medium">Details</CardHeader>
             <CardContent>
                 <p>Stage: {deal?.dealStage ?? 'NA'}</p>
-                <p>Amount: ${deal?.amount?.toLocaleString() ?? 'NA'}</p>
+                <p>Likelihood of Close: {deal?.likehood ? `${deal?.likelihood}%` : 'NA'}</p>
+                <p>Amount: {`$${deal?.amount?.toLocaleString()}` ?? 'NA'}</p>
                 <p>First Contact: {deal?.firstContact?.split('T')[0] ?? 'NA'}</p>
                 <p>Close Date: {deal?.closeDate?.split('T')[0] ?? 'NA'}</p>
                 <p>Account Owner: {deal?.accountOwner ?? 'NA'}</p>
