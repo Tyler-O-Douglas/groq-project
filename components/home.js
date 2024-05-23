@@ -23,16 +23,6 @@ export async function Home() {
         <div className="container mx-auto py-4 px-4 md:px-6">
           <div className="flex items-center justify-between">
             <h1 className="text-xl font-bold">Groq Deals</h1>
-            <div className="flex items-center gap-4">
-              <Button size="icon" variant="ghost">
-                <FilterIcon className="h-6 w-6 text-gray-500 dark:text-gray-400" />
-                <span className="sr-only">Filter</span>
-              </Button>
-              <Button size="icon" variant="ghost">
-                <ListIcon className="h-6 w-6 text-gray-500 dark:text-gray-400" />
-                <span className="sr-only">Sort</span>
-              </Button>
-            </div>
           </div>
         </div>
       </header>
