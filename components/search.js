@@ -32,7 +32,7 @@ export default function Search({data}) {
     return (
     <Card className="mb-8">
     <CardHeader className="items-center">
-        <h2 className="text-xl font-bold">To search use the search bar.</h2>
+        <h2 className="text-xl font-bold">To ask questions use the search bar.</h2>
         <h3 className="text-lg font-medium">To mutate data, create data, or delete data, record a note</h3>
         <h4 className="text-md font-small">Click on a deal name in the table to see more information about it</h4>
     </CardHeader>
