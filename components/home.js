@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import Modal from "@/components/deal-modal"
 import Search from "@/components/search"
 import { getDeals } from "@/lib/mongo/getPostDeals"
+import Image from 'next/image'
 
 
 export async function Home() {
@@ -22,7 +23,8 @@ export async function Home() {
       <header className="bg-white dark:bg-gray-900 shadow-sm">
         <div className="container mx-auto py-4 px-4 md:px-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-bold">Groq Deals</h1>
+            <Image src="/Groq_Logo_24.png" alt="logo" width={100} height={100} />
+            <h1 className="text-xl font-bold">CRM</h1>
           </div>
         </div>
       </header>
